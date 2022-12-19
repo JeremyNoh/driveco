@@ -7,17 +7,21 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "web": "react-app-rewired start",
-    "build:web": "react-app-rewired build",
+    "web": "GENERATE_SOURCEMAP=false react-app-rewired start",
+    "build:web": "GENERATE_SOURCEMAP=false react-app-rewired build",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.1",
+    "@react-navigation/native-stack": "^6.9.7",
     "@tsconfig/react-native": "^2.0.3",
     "babel-plugin-react-native-web": "^0.18.10",
     "react": "18.1.0",
     "react-dom": "^18.2.0",
     "react-native": "0.70.6",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.2",
     "react-native-web": "^0.18.10"
   },
   "devDependencies": {
