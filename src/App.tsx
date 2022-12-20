@@ -7,6 +7,7 @@ import {StyleSheet} from 'react-native';
 import {enableExperimentalWebImplementation} from 'react-native-gesture-handler';
 enableExperimentalWebImplementation();
 import 'react-native-gesture-handler';
+import './i18n';
 
 const Stack = createNativeStackNavigator();
 

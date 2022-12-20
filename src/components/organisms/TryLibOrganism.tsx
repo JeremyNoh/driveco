@@ -1,9 +1,16 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 
 interface Props {}
 
 export default function TryLibOrganism({}: Props) {
+  const {t, i18n} = useTranslation();
+
+  const changeTraduction = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'fr' : 'en');
+  };
+
   return (
     <View style={[styles.container]}>
       <Text>
@@ -12,7 +19,11 @@ export default function TryLibOrganism({}: Props) {
         facilis nobis asperiores. Veritatis tempore quo, harum velit laboriosam
         illo?
       </Text>
-      <Text>deded</Text>
+      <Text>{t('INFO_APP.NAME')}</Text>
+
+      <TouchableOpacity onPress={changeTraduction}>
+        <Text>Changer de Langue</Text>
+      </TouchableOpacity>
     </View>
   );
 }
