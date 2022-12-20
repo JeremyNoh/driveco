@@ -7,7 +7,6 @@ module.exports = {
   ],
   plugins: [
     ['@babel/plugin-transform-flow-strip-types'],
-    ['optional-require'],
     ['@babel/plugin-proposal-export-namespace-from'],
     ['react-native-reanimated/plugin', {relativeSourceLocation: true}],
     [
