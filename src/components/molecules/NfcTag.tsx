@@ -1,12 +1,24 @@
-import React from 'react';
-import {Alert, Platform} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Alert, Platform, StyleSheet, Text} from 'react-native';
 
 import NfcManager, {NfcTech} from 'react-native-nfc-manager';
 import {Button} from '../atoms';
 
-Platform.OS !== 'web' && NfcManager.start();
-
 export default function NfcTag() {
+  const [hasNFC, setHasNFC] = useState<boolean | null>(null);
+  useEffect(() => {
+    const checkIsSupported = async () => {
+      const deviceIsSupported = await NfcManager.isSupported();
+
+      setHasNFC(deviceIsSupported);
+      if (deviceIsSupported) {
+        await NfcManager.start();
+      }
+    };
+
+    Platform.OS === 'web' ? setHasNFC(false) : checkIsSupported();
+  }, []);
+
   async function readNdef() {
     try {
       // register for the NFC tag with NDEF in it
@@ -22,6 +34,17 @@ export default function NfcTag() {
       NfcManager.cancelTechnologyRequest();
     }
   }
-
+  if (hasNFC === null) {
+    return <Text style={styles.text}>Loading</Text>;
+  } else if (!hasNFC) {
+    return <Text style={styles.text}>NFC pas Compatible</Text>;
+  }
   return <Button onPress={readNdef} title="Scan a Tag" />;
 }
+
+const styles = StyleSheet.create({
+  text: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});

@@ -1,5 +1,5 @@
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {ChangeLanguage, NfcTag} from '../molecules';
 
 interface Props {}
@@ -17,7 +17,7 @@ export default function TryLibOrganism({}: Props) {
       <ChangeLanguage />
 
       <View style={styles.slide} />
-      {Platform.OS !== 'web' && <NfcTag />}
+      <NfcTag />
     </View>
   );
 }
