@@ -1,5 +1,9 @@
 {
   "INFO_APP": {
-    "NAME": "DRIVECO App"
+    "NAME": "DRIVECO App",
+    "FR": "Fench",
+    "EN": "English",
+    "CURRENT_LANG": "Actualy this app its in : ",
+    "CHANGE_LANG": "Change language"
   }
 }

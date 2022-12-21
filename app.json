@@ -1,4 +1,12 @@
 {
   "name": "driveco",
-  "displayName": "driveco"
+  "displayName": "driveco",
+  "expo": {
+    "autolinking": {
+      "exclude": [
+        "expo-font",
+        "expo-constants"
+      ]
+    }
+  }
 }

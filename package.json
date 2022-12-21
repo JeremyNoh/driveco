@@ -5,6 +5,8 @@
   "homepage": "./",
   "scripts": {
     "android": "react-native run-android",
+    "build:android": "yarn clean && cd android/  && ./gradlew clean && ./gradlew assembleRelease && cd ..",
+    "clean": "npx watchman watch-del '/Users/jeremynoh/Desktop/Projets/driveco' ; npx watchman watch-project '/Users/jeremynoh/Desktop/Projets/driveco'",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "web": "GENERATE_SOURCEMAP=false react-app-rewired start",
@@ -27,6 +29,7 @@
     "react-native": "0.70.6",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-localize": "^2.2.4",
+    "react-native-nfc-manager": "^3.14.2",
     "react-native-reanimated": "^2.13.0",
     "react-native-safe-area-context": "^4.4.1",
     "react-native-screens": "^3.18.2",

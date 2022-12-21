@@ -42,17 +42,13 @@ export default Button;
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 15,
-    paddingHorizontal: 20,
-    paddingVertical: 15,
-    borderWidth: 4,
+    margin: 20,
     borderColor: '#136397',
-    borderStyle: 'solid',
-    elevation: 20,
-    textAlign: 'center',
-    display: 'flex',
-    justifyContent: 'center',
+    borderWidth: 1,
     alignItems: 'center',
+    padding: 10,
+    textAlign: 'center',
+    justifyContent: 'center',
   },
   disabled: {
     pointerEvents: 'none',
@@ -60,7 +56,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#88B0CB',
   },
   text: {
-    fontSize: 17,
     textTransform: 'uppercase',
     fontWeight: 'bold',
     margin: 0,
