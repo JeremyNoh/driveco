@@ -42,11 +42,14 @@ const Input: React.FC<Props> = ({
   onBlur,
 }) => {
   return (
-    <View style={[styles.container, styleContainer]}>
-      <Text style={[styles.title, {backgroundColor: backgroundColorTitle}]}>
+    <View testID="viewInputId" style={[styles.container, styleContainer]}>
+      <Text
+        testID="nameTextInputId"
+        style={[styles.title, {backgroundColor: backgroundColorTitle}]}>
         {name}
       </Text>
       <TextInput
+        testID="textInputId"
         onChangeText={valueChange => onChange(valueChange)}
         placeholder={placeholder}
         style={[styles.input, style]}

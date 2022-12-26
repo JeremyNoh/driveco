@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Atom Match with snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "#707070",
+        "borderRadius": 13,
+        "borderWidth": 1,
+        "display": "flex",
+        "height": 40,
+        "justifyContent": "flex-start",
+        "marginBottom": 25,
+        "marginTop": 13,
+        "position": "relative",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+  testID="viewInputId"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "color": "#707070",
+          "fontSize": 14,
+          "left": 20,
+          "paddingHorizontal": 5,
+          "paddingVertical": 0,
+          "position": "absolute",
+          "textAlign": "center",
+          "textTransform": "uppercase",
+          "top": -10,
+        },
+        Object {
+          "backgroundColor": "#E8E8E8",
+        },
+      ]
+    }
+    testID="nameTextInputId"
+  >
+    test
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    style={
+      Array [
+        Object {
+          "border": "none",
+          "borderRadius": 13,
+          "height": "95%",
+          "paddingLeft": 10,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="textInputId"
+    value=""
+  />
+</View>
+`;

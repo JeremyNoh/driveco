@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Alert, Platform, StyleSheet, Text} from 'react-native';
+import {Alert, Platform, StyleSheet, Text, View} from 'react-native';
 
 import NfcManager, {NfcTech} from 'react-native-nfc-manager';
 import {Button} from '../atoms';
@@ -35,11 +35,23 @@ export default function NfcTag() {
     }
   }
   if (hasNFC === null) {
-    return <Text style={styles.text}>Loading</Text>;
+    return (
+      <Text testID="loadingNfcId" style={styles.text}>
+        Loading
+      </Text>
+    );
   } else if (!hasNFC) {
-    return <Text style={styles.text}>NFC pas Compatible</Text>;
+    return (
+      <Text testID="notAvailableNfcId" style={styles.text}>
+        NFC pas Compatible
+      </Text>
+    );
   }
-  return <Button onPress={readNdef} title="Scan a Tag" />;
+  return (
+    <View testID="availableNfcId">
+      <Button onPress={readNdef} title="Scan a Tag" />;
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

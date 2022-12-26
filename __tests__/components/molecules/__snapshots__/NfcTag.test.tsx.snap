@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NFC-Tag Molecule Match with snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "fontWeight": "bold",
+      "textAlign": "center",
+    }
+  }
+  testID="loadingNfcId"
+>
+  Loading
+</Text>
+`;

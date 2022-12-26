@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Atom Match with snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#136397",
+      "borderWidth": 1,
+      "justifyContent": "center",
+      "margin": 20,
+      "opacity": 1,
+      "padding": 10,
+      "textAlign": "center",
+    }
+  }
+  testID="buttonId"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontWeight": "bold",
+          "margin": 0,
+          "textAlign": "center",
+          "textTransform": "uppercase",
+        },
+        undefined,
+      ]
+    }
+    testID="textButtonId"
+  >
+    test
+  </Text>
+</View>
+`;
